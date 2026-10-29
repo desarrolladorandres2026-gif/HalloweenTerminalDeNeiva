@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Halloween se toma el Terminal · Terminal de Transportes de Neiva</title>
+<meta name="description" content="Invitación a celebrar Halloween el sábado 31 de octubre de 2026 en el Terminal de Transportes de Neiva.">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23050505%27/%3E%3Ccircle cx=%2716%27 cy=%2718%27 r=%279%27 fill=%27%23FF6A00%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<canvas id="back" aria-hidden="true"></canvas>
+<div id="photo" aria-hidden="true"></div>
+
+<div id="pumpkin" role="button" tabindex="-1" aria-label="Calabaza de Halloween">
+  <div class="pk-inner"><canvas id="pk"></canvas></div>
+</div>
+
+<canvas id="drac" aria-hidden="true"></canvas>
+<canvas id="front" aria-hidden="true"></canvas>
+<div id="vignette" aria-hidden="true"></div>
+
+<main id="stage">
+  <section id="s-terminal" class="scene">
+    <h2 class="tname">
+      <span class="row r1"><span class="w" style="--i:0">TERMINAL</span><span class="w" style="--i:1">DE</span><span class="w" style="--i:2">TRANSPORTES</span></span>
+      <span class="row r2"><span class="w" style="--i:3">DE</span><span class="w" style="--i:4">NEIVA</span></span>
+    </h2>
+  </section>
+
+  <section id="s-announce" class="scene">
+    <h1 class="a-title"><span class="t1">HALLOWEEN</span><span class="t2">SE TOMA EL TERMINAL</span></h1>
+    <p class="a-sub">¡Este 31 de octubre ven disfrazado! Si tienes hijos, ¡tráelos también con sus mejores disfraces!<br><br>¡Los esperamos para disfrutar juntos de las actividades y sorpresas que tenemos preparadas!</p>
+    <p class="a-date"><span>SÁBADO · 31 DE OCTUBRE DE 2026</span></p>
+    <p class="a-inst">TERMINAL DE TRANSPORTES DE NEIVA</p>
+    <p class="a-invite">¡ESTÁS INVITADO!</p>
+  </section>
+</main>
+
+
+<p id="hint">toca la calabaza hasta romperla</p>
+
+<div id="secret" aria-live="polite"><p></p></div>
+
+<button id="sound" type="button" aria-label="Silenciar música" aria-pressed="false">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5H4z"/>
+    <path class="waves" d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/>
+    <path class="slash" d="M16 9.5l5 5M21 9.5l-5 5"/>
+  </svg>
+</button>
+
+<div id="actions">
+  <button id="reveal" class="cta primary" type="button" hidden>REVELAR LA INVITACIÓN</button>
+  <button id="replay" class="cta ghost" type="button" hidden>REPETIR EXPERIENCIA</button>
+</div>
+
+<div id="flash" aria-hidden="true"></div>
+<div id="cut"aria-hidden="true"></div>
+
+<div id="gate">
+  <canvas id="gate-canvas" aria-hidden="true"></canvas>
+  <span class="ember" aria-hidden="true"></span>
+  <button id="enter" type="button">TOCA PARA INGRESAR A LA EXPERIENCIA HALLOWEEN DEL TERMINAL DE TRANSPORTES DE NEIVA</button>
+</div>
+
+<noscript><p style="position:fixed;inset:0;display:grid;place-items:center;color:#ffb347;background:#050505;margin:0;padding:1rem;text-align:center">Esta invitación necesita JavaScript activado.</p></noscript>
+
+<script src="js/config.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/pumpkin.js"></script>
+<script src="js/dracula.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/gate.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
